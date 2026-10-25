@@ -36,7 +36,7 @@
     "youtube-transcript-plus": "^2.0.3"
   },
   "devDependencies": {
-    "@types/node": "^24.19.2",
+    "@types/node": "^26.6.5",
     "typescript": "^7.0.2",
     "vitest": "^5.0.5"
   },
