@@ -1,0 +1,47 @@
+name: Bug report
+description: Something isn't working as expected
+labels: [bug]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Video URL
+      description: The YouTube URL you ran the command with.
+      placeholder: https://www.youtube.com/watch?v=...
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command and output
+      description: The full command you ran and everything it printed. Do not include your API key.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: yt-md-summary version
+      description: Output of `yt-md-summary --version`.
+    validations:
+      required: true
+  - type: input
+    id: node
+    attributes:
+      label: Node version
+      description: Output of `node --version`.
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options: [macOS, Windows, Linux, Other]
+    validations:
+      required: true

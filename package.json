@@ -1,0 +1,47 @@
+{
+  "name": "yt-md-summary",
+  "version": "0.1.0",
+  "description": "CLI to generate YouTube markdown summaries from transcripts using Google Gemini",
+  "type": "module",
+  "bin": {
+    "yt-md-summary": "dist/cli.js"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "clean": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\"",
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "prepublishOnly": "npm run clean && npm run build && npm test"
+  },
+  "keywords": [
+    "youtube",
+    "transcript",
+    "summary",
+    "markdown",
+    "gemini",
+    "cli"
+  ],
+  "author": "Brett Jankord",
+  "license": "MIT",
+  "dependencies": {
+    "@google/genai": "^2.31.0",
+    "youtube-transcript-plus": "^2.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bjankord/youtube-md-summary.git"
+  }
+}
