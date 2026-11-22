@@ -32,7 +32,7 @@
   "author": "Brett Jankord",
   "license": "MIT",
   "dependencies": {
-    "@google/genai": "^2.31.0",
+    "@google/genai": "^3.6.1",
     "youtube-transcript-plus": "^2.0.3"
   },
   "devDependencies": {
